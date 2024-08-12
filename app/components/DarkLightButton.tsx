@@ -1,5 +1,5 @@
 'use client';
-import { FiZap, FiZapOff } from 'react-icons/fi';
+import { FaLightbulb , FaRegLightbulb} from 'react-icons/fa';
 import { useTheme } from 'next-themes';
 
 // Functional component to render a theme toggle button
@@ -21,12 +21,12 @@ function DarkLightButthon() {
       onClick={toggleTheme}
     >
       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-200">
-        <FiZap 
+        <FaLightbulb 
           className={`w-6 h-6 text-yellow-500 ${isDarkMode ? 'opacity-100' : 'opacity-0'}`} 
         />
       </div>
       <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-200">
-        <FiZapOff 
+        <FaRegLightbulb 
           className={`w-6 h-6 text-blue-400 ${isDarkMode ? 'opacity-0' : 'opacity-100'}`} 
         />
       </div>

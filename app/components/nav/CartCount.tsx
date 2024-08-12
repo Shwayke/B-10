@@ -2,7 +2,7 @@
 
 import { useCart } from "@/hooks/useCart";
 import { useRouter } from "next/navigation"; // Importing useRouter hook from Next.js for navigation
-import { CiShoppingCart } from "react-icons/ci";
+import { TiShoppingCart } from "react-icons/ti";
 import { styleClasses } from  '@/Utils/tailwindClasses';
 
 
@@ -16,7 +16,7 @@ const CartCount = () => {
         onClick={()=>router.push('/cart')}>
             {/* Shopping cart icon */}
             <div className="text-3xl">
-                <CiShoppingCart className="cursor-pointer" />
+                <TiShoppingCart className="cursor-pointer" />
             </div>
             {/* Cart count badge */}
             <span className={styleClasses.cartCountIcon}>{cartTotalQty}</span>
