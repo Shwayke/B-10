@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply w-full overflow-x-hidden flex flex-col;
+}
+
+body {
+  @apply transition-colors duration-300 ;
+}
+
+.layout-body{
+  @apply 
+  bg-light-primaryBG
+  dark:bg-dark-primaryBG 
+  text-light-text 
+  dark:text-dark-text
+}
+
+.nav-bar{
+  @apply
+  sticky
+  top-0 
+  w-full 
+  z-30 
+  shadow-sm;
+  height: auto;
+}
+
+.nav-bar-inner{
+  @apply
+  text-lg 
+  flex 
+  flex-col 
+  sm:flex-row 
+  justify-between 
+  items-center 
+  py-4 
+  relative
+}
+
+.nav-bar-logo{
+  @apply
+  flex 
+  items-center 
+  gap-4
+}
+
+.nav-bar-menues{
+  @apply
+  flex 
+  items-center 
+  gap-4 
+  mt-4 
+  sm:mt-0
+}
+
+.nav-bar-user-menu{
+  @apply
+  flex 
+  items-center 
+  gap-2
+}
+
+.user-menu{
+  @apply
+  p-2
+  border-[1px]
+  border-slate-400
+  flex
+  flex-row
+  items-center
+  gap-1
+  rounded-full
+  cursor-pointer
+  hover:shadow-md
+  hover:shadow-white
+  transition
+}
+
+.opened-user-menu {
+  @apply
+  fixed
+  rounded-md
+  shadow-md
+  bg-white
+  overflow-hidden
+  text-sm
+  flex
+  flex-col
+  cursor-pointer
+  w-[200px]
+  max-h-[calc(100vh-100px)]
+  overflow-y-auto
+  right-4
+  top-16
+  z-50;
+}
+
+@media (min-width: 640px) {
+  .opened-user-menu {
+    @apply
+    absolute
+    right-0
+    top-full
+    mt-2
+    w-[170px];
+  }
+}
+.user-menu-item{
+  @apply
+  px-4 
+  py-3 
+  hover:bg-neutral-100 
+  transition 
+  text-black
+}
+
+.cart-count-icon{
+  @apply
+  absolute
+  top-[-10px] 
+  right-[-10px]
+  bg-cyan-600
+  text-black
+  w-6
+  h-6
+  rounded-full 
+  flex 
+  justify-center 
+  items-center
+}
+
+.nav-bar-navigation{
+  @apply
+  w-full 
+  shadow-sm 
+  top-20 
+  pt-4
+}
+
+.nav-bar-navigation-row{
+  @apply
+  flex 
+  justify-center
+}
+
+.nav-bar-navigation-items{
+  @apply
+  grid 
+  grid-cols-1 
+  md:grid-cols-2 
+  lg:grid-cols-4 
+  gap-8
+}
+
+.nav-bar-navigation-item{
+  @apply
+  relative 
+  flex 
+  items-center 
+  justify-center 
+  p-2
+}
+
+.nav-bar-navigation-button{
+  @apply
+  px-4 
+  py-2
+  font-bold 
+  text-lg 
+  text-cyan-600
+  border-2 
+  border-cyan-600
+  rounded-lg
+  bg-transparent
+  transition-all 
+  duration-300 
+  ease-in-out
+  hover:bg-cyan-600 
+  hover:text-white
+  cursor-pointer
+  w-full
+  text-center
+}
+
+.footer{
+  @apply
+  mt-auto
+  flex 
+  flex-col 
+  md:flex-row 
+  justify-between 
+  pt-8 
+  pb-8 
+  relative 
+  z-10
+  w-full
+}
+
+.footer-about-us{
+  @apply
+  w-full 
+  md:w-1/3 
+  mb-6 
+  md:mb-0
+}
+
+.footer-about-us-title{
+  @apply
+  text-base 
+  font-bold 
+  mb-2
+}
+
+.footer-about-us-text{
+  @apply
+  w-full 
+  mb-2 
+  md:mb-0
+}
+
+.footer-creators{
+  @apply
+  text-base 
+  font-bold 
+  w-full
+  sm:w-1/2
+  md:w-1/4
+  lg:w-1/6
+  mb-6
+  flex
+  flex-col
+  gap-2
+}
+
+.home-banner{
+  @apply
+  relative 
+  py-20 
+  px-6 
+  md:px-20
+}
+
+.home-banner-segragate{
+  @apply
+  mx-auto 
+  flex 
+  flex-col 
+  md:flex-row 
+  items-center 
+  justify-between
+}
+
+.home-banner-left{
+  @apply
+  md:w-1/2 
+  z-10 
+  relative
+}
+
+.home-banner-title{
+  @apply
+  text-cyan-600 
+  text-6xl 
+  font-extrabold 
+  mb-6 
+  font-primary 
+  leading-tight
+}
+
+.home-banner-subtitle{
+  @apply
+  block 
+  text-4xl 
+  font-light
+}
+
+.home-banner-text{
+  @apply
+  text-lg 
+  mb-8 
+  leading-relaxed
+}
+
+.home-banner-right{
+  @apply
+  md:w-1/2 
+  relative 
+  mt-10 
+  md:mt-0 
+  flex 
+  justify-center
+}
+
+.home-banner-simple-circle{
+  @apply
+  w-80 
+  h-80 
+  bg-gradient-to-br 
+  from-cyan-600 
+  to-blue-600 
+  opacity-90 
+  rounded-full 
+  transform 
+  rotate-45 
+  absolute 
+  top-10 
+  left-10 
+  blur-xl
+}
+
+.home-banner-gradient-circle{
+  @apply
+  w-72 
+  h-72 
+  bg-gradient-to-br 
+  from-blue-600 
+  to-sky-200 
+  opacity-90 
+  rounded-full 
+  transform 
+  rotate-45 
+  absolute 
+  top-20 
+  left-20 
+  blur-xl
+}
+
+.home-page-bg-circle{
+  @apply
+  w-80 
+  h-80 
+  object-cover 
+  rounded-full 
+  shadow-2xl 
+  z-10 
+  transform 
+  hover:scale-105 
+  transition-transform 
+  duration-500
+}
+
+.marketplace{
+  @apply
+  grid 
+  grid-cols-1 
+  sm:grid-cols-2 
+  md:grid-cols-3 
+  lg:grid-cols-4 
+  xl:grid-cols-5 
+  2xl:grid-cols-6 
+  gap-8 
+  mt-6
+}
+
+.marketplace-product-card{
+  @apply
+  col-span-1 
+  cursor-pointer 
+  border-slate-200 
+  bg-white  
+  text-black
+  rounded-sm 
+  p-2 
+  transition 
+  hover:scale-105 
+  text-center 
+  text-sm
+  shadow-sm 
+  shadow-slate-400
+}
+
+.marketplace-product-card-info{
+  @apply
+  flex 
+  flex-col
+  items-center
+  w-full
+  gap-1
+}
+
+.marketplace-product-card-image{
+  @apply
+  aspect-square
+  overflow-hidden
+  relative 
+  w-full
+  flex 
+  justify-center 
+  items-center
+}
+
+.product-page{
+  @apply
+  grid 
+  grid-cols-1 
+  md:grid-cols-2 
+  gap-4 
+  text-black
+}
+
+.product-page-details{
+  @apply
+  md:order-1 
+  p-4 
+  bg-white 
+  shadow-md 
+  rounded-lg 
+  flex 
+  flex-col 
+  justify-between
+}
+
+.product-page-details-title{
+  @apply
+  text-3xl 
+  md:text-4xl 
+  lg:text-5xl 
+  font-medium 
+  mb-6
+}
+
+.product-page-details-text-block{
+  @apply
+  text-base 
+  md:text-lg 
+  lg:text-xl 
+  text-justify 
+  mb-4
+}
+
+.product-page-image{
+  @apply
+  md:order-2
+}
+
+.product-page-image-scope{
+  @apply
+  grid 
+  grid-cols-6 
+  gap-2 
+  h-full 
+  max-h-[5000px] 
+  min-h-[300px] 
+  sm:min-h-[300px]
+}
+
+.product-page-image-size{
+  @apply
+  col-span-6 
+  relative 
+  aspect-square
+}
+
+.exhibition-artist{
+  @apply
+  text-2xl 
+  font-bold 
+  mb-4
+}
+
+.exhibition-cards{
+  @apply
+  grid 
+  grid-cols-1 
+  sm:grid-cols-2 
+  md:grid-cols-3 
+  lg:grid-cols-4 
+  gap-8
+}
+
+.exhibition-card{
+  @apply
+  flex 
+  flex-col 
+  items-center 
+  w-full 
+  p-4 
+  border 
+  border-gray-200 
+  rounded-lg 
+  shadow-lg 
+  hover:shadow-xl 
+  transition-shadow 
+  duration-300
+  bg-white
+  text-center
+}
+
+.exhibition-card-image{
+  @apply
+  relative 
+  w-full 
+  h-64 
+  bg-gray-100 
+  rounded-lg 
+  overflow-hidden
+}
+
+.exhibition-card-title{
+  @apply
+  mt-4 
+  text-lg 
+  font-semibold 
+  text-gray-800
+}
+
+.form-wrapper-outer{
+  @apply
+  min-h-fit
+  h-full
+  flex
+  items-center
+  justify-center
+  pb-12
+  pt-24
+}
+
+.form-wrapper-inner{
+  @apply
+  max-w-[650px]
+  w-full
+  flex
+  flex-col
+  gap-6
+  items-center
+  shadow-xl
+  shadow-cyan-600
+  rounded-md
+  p-4
+  md:p-8
+}
+
+.add-product-form-text-area{
+  @apply
+  w-full 
+  flex 
+  flex-col 
+  flex-wrap 
+  gap-4
+}
+
+.add-product-form-drag-area{
+  @apply
+  border-2 
+  border-slate-400 
+  p-2 
+  border-dashed 
+  cursor-pointer 
+  text-sm 
+  font-normal 
+  text-slate-400 
+  flex 
+  flex-col 
+  items-center 
+  justify-center
+}
+
+.order-details{
+  @apply
+  max-w-[1150px] 
+  m-auto 
+  flex 
+  flex-col 
+  gap-2
+}
+
+.order-item-name{
+  @apply
+  text-3xl 
+  font-bold 
+  mt-4 
+  mb-2
+}
+
+.order-item-artist{
+  @apply
+  font-light 
+  italic 
+  mt-4 
+  mb-2
+}
+
+.order-item-card{
+  @apply
+  grid 
+  grid-cols-[2fr,auto,auto] 
+  text-xs 
+  md:text-sm 
+  gap-4 
+  border-b-[1.5px] 
+  border-white 
+  py-4 
+  items-center
+}
+
+.order-item-image{
+  @apply
+  col-span-2 
+  justify-self-start 
+  flex 
+  gap-2 
+  md:gap-6 
+  items-center
+  w-full
+}
+
+.order-item-image-inner{
+  @apply
+  relative 
+  w-full
+  max-w-[500px] 
+  aspect-square
+}
+
+.container{
+  @apply 
+  w-full flex-grow flex flex-col
+  max-w-[1920p]
+  mx-auto 
+  px-4
+  sm:px-6
+  md:px-8
+  lg:px-12
+  xl:px-20;
+}
