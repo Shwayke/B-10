@@ -13,6 +13,7 @@ import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import SelectImage from "../components/inputs/SelectImage";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 // Define types for image and uploaded image
 export type ImageType = {
@@ -180,7 +181,7 @@ const AddProductForm = (user_name:any) => {
         errors={errors}
         required
       />
-      <div className="add-product-form-text-area">
+      <div className={styleClasses.addProductFormTextArea}>
         <div>
           <div className="font-bold">
             Upload image of your artwork.

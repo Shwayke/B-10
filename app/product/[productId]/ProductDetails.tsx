@@ -63,7 +63,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     }, [cartProducts, product.id]);
 
     return (
-        <div className="product-page">
+        <div className={styleClasses.productPage}>
             {/* Product Image */}
             <div className={styleClasses.productPageImage}>
                 <ProductsImg cartProduct={cartProduct} product={product} />

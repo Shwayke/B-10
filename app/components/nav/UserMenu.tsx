@@ -40,7 +40,7 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
                 <AiFillCaretDown />
             </div>
             {isOpen && (
-                <div className="opened-user-menu">
+                <div className={styleClasses.openedUserMenu}>
                     {currentUser ? (
                         <>
                             <Link href="/purchases">

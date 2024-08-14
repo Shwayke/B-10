@@ -6,6 +6,7 @@ import { Order } from "@prisma/client"
 import moment from "moment";
 import OrderItem from "./OrderItem";
 import Heading from "@/app/components/Heading";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 
 // Define the OrderDetails functional component
@@ -17,7 +18,7 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({order}) => {
 
     //const router= useRouter();
     return (
-        <div className="order-details">
+        <div className={styleClasses.orderDetails}>
             {/* Heading for order details */}
             <div className="mt-8"> 
                 <Heading title="Purchase Details"/>

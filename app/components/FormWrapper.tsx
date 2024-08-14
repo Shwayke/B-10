@@ -1,13 +1,15 @@
+import { styleClasses } from "@/Utils/tailwindClasses";
+
 // FormWrapper component definition
 const FormWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     // Outer container div for the form
     <div
-      className="form-wrapper-outer"
+      className={styleClasses.formWrapperOuter}
     >
       {/* Inner container div for the form */}
       <div
-        className="form-wrapper-inner"
+        className={styleClasses.formWrapperInner}
       >
         {/* Rendering child components inside the FormWrapper */}
         {children}

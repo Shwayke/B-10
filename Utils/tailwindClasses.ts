@@ -8,6 +8,7 @@ export const styleClasses = {
     navBarUserMenu: "flex items-center gap-2",
     userMenu: "p-2 border border-slate-400 flex flex-row items-center gap-1 rounded-full cursor-pointer hover:shadow-md hover:shadow-white transition",
     userMenuItem: "px-4 py-3 hover:bg-neutral-100 transition text-black",
+    openedUserMenu: "fixed rounded-md shadow-md bg-white overflow-hidden text-sm flex flex-col cursor-pointer w-[200px] max-h-[calc(100vh-100px)] overflow-y-auto right-4 top-16 z-50 sm:absolute sm:right-0 sm:top-full sm:mt-2 sm:w-[170px]",
     cartCountIcon: "absolute top-[-10px] right-[-10px] bg-cyan-600 text-black w-6 h-6 rounded-full flex justify-center items-center",
     navBarNavigation: "w-full shadow-sm top-20 pt-4",
     navBarNavigationRow: "flex justify-center",
@@ -35,20 +36,27 @@ export const styleClasses = {
     marketplace: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 mt-6",
     productPageDetails:"  md:order-1 p-4 bg-white shadow-md rounded-lg flex flex-col justify-between",
     productPageDetailsTitle:"  text-3xl md:text-4xl lg:text-5xl font-medium mb-6",
-    productPageDetailsTextBlock:"  text-base md:text-lg lg:text-xl text-justify mb-4",
+    productPageDetailsTextBlock:" text-base md:text-lg lg:text-xl text-justify mb-4",
     productPageImageScope:"  grid grid-cols-6 gap-2 h-full max-h-[5000px] min-h-[300px] sm:min-h-[300px]",
     productPageImageSize:"  col-span-6 relative aspect-square",
     productPageImage:"  md:order-2",
+    productPage:"  grid grid-cols-1 md:grid-cols-2 gap-4 text-black",
     exhibitionArtist:"  text-2xl font-bold mb-4",
     exhibitionCards:"  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
     exhibitionCardImage:"  relative w-full h-64 bg-gray-100 rounded-lg overflow-hidden",
     exhibitionCardTitle:"  mt-4 text-lg font-semibold text-gray-800",
     exhibitionCard:"  flex flex-col items-center w-full p-4 border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-center",
-
-
-
-
-
+    formWrapperOuter:"  min-h-fit h-full flex items-center justify-center pb-12 pt-24",
+    formWrapperInner:"  max-w-[650px] w-full flex flex-col gap-6 items-center shadow-xl shadow-cyan-600 rounded-md p-4 md:p-8",
+    addProductFormTextArea:" w-full flex flex-col flex-wrap gap-4",
+    addProductFormDragArea:"  border-2 border-slate-400 p-2 border-dashed cursor-pointer text-sm font-normal text-slate-400 flex flex-col items-center justify-center",
+    orderDetails:"  max-w-[1150px] m-auto flex flex-col gap-2",
+    orderItemName:" text-3xl font-bold mt-4 mb-2",
+    orderItemArtist:"  font-light italic mt-4 mb-2",
+    orderItemCard:"  grid grid-cols-[2fr,auto,auto] text-xs md:text-sm gap-4 border-b-[1.5px] border-white py-4 items-center",
+    orderItemImageInner:" relative w-fullmax-w-[500px] aspect-square",
+    orderItemImage:"  col-span-2 justify-self-start flex gap-2 md:gap-6 items-centerw-full",
+    container:"  w-full flex-grow flex flex-col max-w-[1920p] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20",
 
 
 };
