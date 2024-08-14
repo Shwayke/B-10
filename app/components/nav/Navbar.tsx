@@ -9,6 +9,7 @@ import logo from "./public/logo2.png";
 import dynamic from 'next/dynamic';
 import NavigationItems from "./NavigationItems";
 import Container from "../Container";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 // Dynamically import the ThemeBtn component with ssr: false
 const ThemeBtn = dynamic(() => import('../DarkLightButton'), {
@@ -21,11 +22,11 @@ const Navbar = async () => {
 
 
   return (
-    <div className="nav-bar">
+    <div className={styleClasses.navBar}>
       <Container>
-        <div className="nav-bar-inner">
+        <div className={styleClasses.navBarInner}>
           {/* Left side: Logo and Navigation Links */}
-          <div className="nav-bar-logo">
+          <div className={styleClasses.navBarLogo}>
             {/* Navigation Links */}
             <Link href="/" className="flex items-center">
             <Image src={logo.src} alt="Home" className="h-8" width={32} height={32} />
@@ -35,9 +36,9 @@ const Navbar = async () => {
           {/*className="hidden md:block" */}
 
           {/* Right side: Account and Cart Icons */}
-          <div className="nav-bar-menues">
+          <div className={styleClasses.navBarMenues}>
             {/*div here inorder to not go back to homepage every time */}
-            <div className="nav-bar-user-menu"><UserMenu currentUser={currentUser}/></div>
+            <div className={styleClasses.navBarUserMenu}><UserMenu currentUser={currentUser}/></div>
             {/* Cart Icon with badge */}
             <div className="relative">
               <CartCount/>

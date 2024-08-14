@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from "next/image";
+import { styleClasses } from '@/Utils/tailwindClasses';
 
 // Define the props type for ProductPreview
 interface ProductPreviewProps {
@@ -12,8 +13,8 @@ interface ProductPreviewProps {
 const ProductPreview: React.FC<ProductPreviewProps> = ({ data }) => {
 
     return (
-      <div className="exhibition-card">
-        <div className="exhibition-card-image">
+      <div className={styleClasses.exhibitionCard}>
+        <div className={styleClasses.exhibitionCardImage}>
             <Image
                 fill
                 src={(data.images ?? [])[0]?.image}
@@ -21,7 +22,7 @@ const ProductPreview: React.FC<ProductPreviewProps> = ({ data }) => {
                 className="object-cover"
             />
         </div>
-        <div className="exhibition-card-title">{data.name}</div>
+        <div className={styleClasses.exhibitionCardTitle}>{data.name}</div>
       </div>
     );
 };

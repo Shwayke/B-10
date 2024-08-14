@@ -4,6 +4,7 @@ import Button from "@/app/components/Button";
 import ProductsImg from "@/app/components/products/ProductsImg";
 import { useCart } from "@/hooks/useCart";
 import { formatPrices } from "@/Utils/formatPrices";
+import { styleClasses } from "@/Utils/tailwindClasses";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MdCheckCircle } from "react-icons/md";
@@ -64,18 +65,18 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     return (
         <div className="product-page">
             {/* Product Image */}
-            <div className="product-page-image">
+            <div className={styleClasses.productPageImage}>
                 <ProductsImg cartProduct={cartProduct} product={product} />
             </div>
             {/* Product Details */}
-            <div className="product-page-details">
+            <div className={styleClasses.productPageDetails}>
                 <div>
-                    <h2 className="product-page-details-title">{product.name}</h2>
+                    <h2 className={styleClasses.productPageDetailsTitle}>{product.name}</h2>
                     <Horizontal />
-                    <div className="product-page-details-text-block">{product.Artist_Name}</div>
-                    <div className="product-page-details-text-block">{product.Size}</div>
-                    <div className="product-page-details-text-block">{product.description}</div>
-                    <div className="product-page-details-text-block">{formatPrices(product.price)}</div>
+                    <div className={styleClasses.productPageDetailsTextBlock}>{product.Artist_Name}</div>
+                    <div className={styleClasses.productPageDetailsTextBlock}>{product.Size}</div>
+                    <div className={styleClasses.productPageDetailsTextBlock}>{product.description}</div>
+                    <div className={styleClasses.productPageDetailsTextBlock}>{formatPrices(product.price)}</div>
                     <Horizontal />
                 </div>
                 <div className="mt-auto">

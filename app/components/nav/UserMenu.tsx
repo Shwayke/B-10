@@ -7,6 +7,7 @@ import MenuItem from "./MenuItem";
 import { signOut } from "next-auth/react";
 import { SafeUser } from "@/types";
 import Avatar from "../Avatar";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 interface UserMenuProps {
     currentUser: SafeUser | null;
@@ -34,7 +35,7 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
 
     return (
         <div className="relative" ref={menuRef}>
-            <div onClick={toggleOpen} className="user-menu">
+            <div onClick={toggleOpen} className={styleClasses.userMenu}>
                 <Avatar />
                 <AiFillCaretDown />
             </div>
