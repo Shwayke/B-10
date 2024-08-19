@@ -8,6 +8,7 @@ import { SafeUser } from "@/types";
 import { useRouter } from "next/navigation";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 
 // Defining the props interface for the CartClient component
@@ -40,17 +41,10 @@ const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
   return (
     <div>
         <Heading title="Shopping Cart" center/>
-        <div className="
-        grid
-        grid-cols-4
-        text-xs
-        gap-5
-        pb-2
-        items-center
-        mt-8">
-            <div className="col-span-2 justify-self-start">Product</div>
-            <div className="justify-self-center">Actions</div>
-            <div className="justify-self-end">Price</div>
+        <div className={styleClasses.cartClientColumns}>
+            <div className={styleClasses.cartClientFirstCol}>Product</div>
+            <div className={styleClasses.cartClientSecondCol}>Actions</div>
+            <div className={styleClasses.cartClientLastCol}>Price</div>
         </div>
         <div>
             {/* Mapping through cartProducts to render each item */}
@@ -58,14 +52,14 @@ const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
                 return <ContentItem key={item.id} item={item}/>;
             })}
         </div>
-        <div className="border-t-[1px] border-cyan-600 py-4 flex justify-between gap-5 ">
+        <div className={styleClasses.cartClientManagement}>
             <div className="w-[100px]">
                 {/* Button to clear the cart */}
                 <Button label='Clear Cart' onClick={() =>
                     {handleClearCart()}} small outline/>
             </div>
-            <div className="text-sm flex flex-col gap-1 items-start">
-                <div className="flex justify-between w-full text-base font-semibold">
+            <div className={styleClasses.cartClientCheckoutSection}>
+                <div className={styleClasses.cartClientSubTotal}>
                     {/* Displaying subtotal */}
                     <span>Subtotal</span>
                     <span>{formatPrices(cartTotalAmount)}</span>
@@ -80,8 +74,7 @@ const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
                 onClick={()=>{currentUser ? router.push('/checkout') : router.push('/login')}}
                 />
                 {/* Link to continue shopping */}
-                <Link href={'/marketPlace'} className="
-                 flex items-center gap-1 mt-2">
+                <Link href={'/marketPlace'} className={styleClasses.cartClientContinueShoppingButton}>
                     <MdArrowBack/>
                     <span>Continue Shopping</span>
                 </Link>

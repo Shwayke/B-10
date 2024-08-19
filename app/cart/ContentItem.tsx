@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useCart } from "@/hooks/useCart";
 import { CartProductType } from "../product/[productId]/ProductDetails";
 import Button from "../components/Button";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 
 // Define props for ContentItem component
@@ -25,27 +26,11 @@ const ContentItem: React.FC<ContentItemProps> = ({ item }) => {
 
    // Render the ContentItem component
   return (
-    <div className="
-      grid
-      grid-cols-4
-      text-xs
-      md:text-sm
-      gap-4
-      border-t-[1px]
-      border-cyan-600
-      py-4
-      items-center
-    ">
-      <div className="col-span-2 
-        justify-self-start 
-        gap-2
-        md:gap-4
-        flex
-        items-center
-      ">
+    <div className={styleClasses.cartItem}>
+      <div className={styleClasses.cartItemFirstCol}>
         {/* Link to product details page */}
         <Link href={`/product/${item.id}`}>
-          <div className="relative w-[70px] aspect-square">
+          <div className={styleClasses.cartItemImage}>
             <Image
               src={item.selectedImg.image}
               alt={item.name}
@@ -55,7 +40,7 @@ const ContentItem: React.FC<ContentItemProps> = ({ item }) => {
           </div>
         </Link>
 
-        <div className="flex flex-col justify-between flex-grow">
+        <div className={styleClasses.cartItemNames}>
           {/* Link to product details page */}
           <Link href={`/product/${item.id}`}>
             {truncateText(item.name)} {/* Truncate product name if too long */}
@@ -65,14 +50,14 @@ const ContentItem: React.FC<ContentItemProps> = ({ item }) => {
           </Link>
         </div>
       </div>
-      <div className="justify-self-center">
+      <div className={styleClasses.cartClientSecondCol}>
         <Button label={'Remove'} 
           outline = {true}
           small = {true}
           onClick={()=>{handleRemoveClick()}}
         />
       </div>
-      <div className="justify-self-end font-semibold">
+      <div className={styleClasses.cartClientLastCol}>
         {formatPrices(item.price)} {/* Display formatted price */}
       </div>
     </div>
