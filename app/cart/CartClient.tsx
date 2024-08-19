@@ -49,8 +49,8 @@ const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
         items-center
         mt-8">
             <div className="col-span-2 justify-self-start">Product</div>
-            <div className="justify-self-center">Price</div>
-            <div className="justify-self-end">Total</div>
+            <div className="justify-self-center">Actions</div>
+            <div className="justify-self-end">Price</div>
         </div>
         <div>
             {/* Mapping through cartProducts to render each item */}

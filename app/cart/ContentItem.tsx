@@ -5,6 +5,7 @@ import { truncateText } from "@/Utils/truncateText";
 import Image from "next/image";
 import { useCart } from "@/hooks/useCart";
 import { CartProductType } from "../product/[productId]/ProductDetails";
+import Button from "../components/Button";
 
 
 // Define props for ContentItem component
@@ -59,26 +60,18 @@ const ContentItem: React.FC<ContentItemProps> = ({ item }) => {
           <Link href={`/product/${item.id}`}>
             {truncateText(item.name)} {/* Truncate product name if too long */}
           </Link>
-          <div>
-           {/* <button className="text-violet-500 underline" onClick={() => 
-              handleRemoveProductFromCart (item)}>
-              Remove
-           </button>*/}
-            <button
-              className="text-cyan-600 underline"
-              onClick={handleRemoveClick}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === "Space") {
-                  handleRemoveClick();
-                }
-              }}
-            >
-            Remove
-            </button>
-          </div>
+          <Link href={`/product/${item.id}`}>
+            {truncateText(item.Artist_Name)} {/* Truncate product name if too long */}
+          </Link>
         </div>
       </div>
-      <div className="justify-self-center">{formatPrices(item.price)}</div>
+      <div className="justify-self-center">
+        <Button label={'Remove'} 
+          outline = {true}
+          small = {true}
+          onClick={()=>{handleRemoveClick()}}
+        />
+      </div>
       <div className="justify-self-end font-semibold">
         {formatPrices(item.price)} {/* Display formatted price */}
       </div>
