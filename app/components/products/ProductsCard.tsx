@@ -5,6 +5,7 @@ import { formatPrices } from "@/Utils/formatPrices";
 import { truncateText } from "@/Utils/truncateText";
 import Image from "next/image";
 import { useRouter } from 'next/navigation'; // Correct import
+import { styleClasses } from  '../../../Utils/tailwindClasses';
 
 
 // Define the props interface for the ProductsCard component
@@ -20,12 +21,12 @@ const ProductsCard: React.FC<productsCardProps> = ({ data }) => {
     return (
         <div
             onClick={() => router.push(`/product/${data.id}`)} // Navigate to product detail page on click
-            className="marketplace-product-card"
+            className={styleClasses.marketplaceProductCard}
         >
             {/* Container for product information */}
-            <div className="marketplace-product-card-info">
+            <div className={styleClasses.marketplaceProductCardInfo}>
                 {/* Product image */}
-                <div className="marketplace-product-card-image"
+                <div className={styleClasses.marketplaceProductCardImage}
                 >
                     <Image
                         fill

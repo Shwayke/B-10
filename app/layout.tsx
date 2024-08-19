@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import CartProvider from '@/providers/CartProvider';
 import { Toaster } from 'react-hot-toast';
 import DarkLightProvider from './components/DarkLightProvider';
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 // Define metadata for the application
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Add any other meta tags, stylesheets, or scripts here */}
       </head>
-      <body className="layout-body">
+      <body className={styleClasses.layoutBody}>
         {/* Wrap the <body> element with the 'use client' directive */}
         <DarkLightProvider>
           <Toaster toastOptions={{ style: { background: 'rgb(51 65 85)', color: '#fff' } }} />

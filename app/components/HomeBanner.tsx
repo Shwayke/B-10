@@ -1,28 +1,29 @@
 import React from 'react';
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 // Define the HomeBanner component
 const HomeBanner = () => {
   return (
-    <div className="home-banner">
-      <div className="home-banner-segragate">
+    <div className={styleClasses.homeBanner}>
+      <div className={styleClasses.homeBannerSegragate}>
         {/* Text Content */}
-        <div className="home-banner-left">
-          <h1 className="home-banner-title">
+        <div className={styleClasses.homeBannerLeft}>
+          <h1 className={styleClasses.homeBannerTitle}>
             Artify
-            <span className="home-banner-subtitle">Buy Original Art</span>
+            <span className={styleClasses.homeBannerSubtitle}>Buy Original Art</span>
           </h1>
-          <p className="home-banner-text">
+          <p className={styleClasses.homeBannerText}>
             Discover and buy original, hand-crafted art directly from independent artists around the world. 
             <br />Find any art piece you desire.
             <br />Enjoy exploring art with us.
           </p>
         </div>
         {/* Decorative Elements */}
-        <div className="home-banner-right">
-          <div className="home-banner-simple-circle"></div>
-          <div className="home-banner-gradient-circle"></div>
+        <div className={styleClasses.homeBannerRight}>
+          <div className={styleClasses.homeBannerSimpleCircle}></div>
+          <div className={styleClasses.homeBannerGradientCircle}></div>
           <div 
-            className="home-page-bg-circle">
+            className={styleClasses.homeBannerBigCircle}>
           </div>
         </div>
       </div>

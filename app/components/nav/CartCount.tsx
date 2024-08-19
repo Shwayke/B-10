@@ -3,6 +3,7 @@
 import { useCart } from "@/hooks/useCart";
 import { useRouter } from "next/navigation"; // Importing useRouter hook from Next.js for navigation
 import { CiShoppingCart } from "react-icons/ci";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 
 // CartCount component to display the total quantity of items in the cart
@@ -18,7 +19,7 @@ const CartCount = () => {
                 <CiShoppingCart className="cursor-pointer" />
             </div>
             {/* Cart count badge */}
-            <span className="cart-count-icon">{cartTotalQty}</span>
+            <span className={styleClasses.cartCountIcon}>{cartTotalQty}</span>
         </div>
     );
 };

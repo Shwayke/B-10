@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useDropzone } from 'react-dropzone';
+import { styleClasses } from '@/Utils/tailwindClasses';
 
 // Define props interface for SelectImage component
 interface SelectImageProps {
@@ -32,7 +33,7 @@ const SelectImage: React.FC<SelectImageProps> = ({ item, handleFileChange, handl
   return (
     <div
       {...getRootProps()}
-      className="add-product-form-drag-area"
+      className={styleClasses.addProductFormDragArea}
     >
       <input {...getInputProps()} />
       {isDragActive ? (

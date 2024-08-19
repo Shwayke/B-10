@@ -4,6 +4,7 @@
 
 // Import necessary dependencies and components
 import { CartProductType } from "@/app/product/[productId]/ProductDetails";
+import { styleClasses } from "@/Utils/tailwindClasses";
 import Image from "next/image";
 
 // Define the props interface for the ProductsImg component
@@ -16,9 +17,9 @@ interface ProductsImgProps {
 const ProductsImg: React.FC<ProductsImgProps> = ({ cartProduct, product }) => {
     return (
         // Container for the product image
-        <div className="product-page-image-scope">
+        <div className={styleClasses.productPageImageScope}>
             {/* Image container with responsive layout */}
-            <div className="product-page-image-size">
+            <div className={styleClasses.productPageImageSize}>
                 {/* Render the product image if it exists */}
                 {cartProduct.selectedImg && cartProduct.selectedImg.image && (
                     <Image

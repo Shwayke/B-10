@@ -3,6 +3,7 @@
 import NavItem from "./NavItem";
 import Container from "../Container";
 import { SafeUser } from "@/types";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 interface UserMenuProps {
     currentUser: SafeUser | null;
@@ -12,10 +13,10 @@ interface UserMenuProps {
 const NavigationItems: React.FC<UserMenuProps> = ({ currentUser }) => {
 
     return (
-        <div className="nav-bar-navigation">
+        <div className={styleClasses.navBarNavigation}>
             <Container>
-                <div className="nav-bar-navigation-row">
-                    <div className="nav-bar-navigation-items">
+                <div className={styleClasses.navBarNavigationRow}>
+                    <div className={styleClasses.navBarNavigationItems}>
                         <NavItem
                             label="Home"
                             path="/" // Path for the Home link

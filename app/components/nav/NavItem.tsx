@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { styleClasses } from  '@/Utils/tailwindClasses';
 
 interface NavItemProps {
   label: string; // Required prop for the label text
@@ -7,10 +8,10 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ label, path }) => {
   return (
-    <div className="nav-bar-navigation-item">
+    <div className={styleClasses.navBarNavigationItem}>
       <Link href={path} className="w-full">
         <div
-          className={'nav-bar-navigation-button'}
+          className={styleClasses.navBarNavigationButton}
         >
           {label}
         </div>

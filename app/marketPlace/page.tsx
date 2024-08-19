@@ -4,6 +4,7 @@ import NullDataError from '@/app/components/NullDataError';
 import ProductsCard from '../components/products/ProductsCard';
 import getProducts from '@/actions/getProducts';
 import Container from '../components/Container';
+import { styleClasses } from  '../../Utils/tailwindClasses';
 
 // Define the MarketplacePage component
 export default async function MarketplacePage() {
@@ -15,7 +16,7 @@ export default async function MarketplacePage() {
 
     return (
         <Container>
-        <div className="marketplace">
+        <div className={styleClasses.marketplace}>
             {products.map((product: any, index: number) => (
                 <ProductsCard key={index} data={product} />
             ))}

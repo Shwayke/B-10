@@ -4,6 +4,7 @@
 import { CartProductType } from "@prisma/client";
 import Image from "next/image";
 import DownloadImage from "./DownloadImage";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 interface OrderItemProps{
   item: CartProductType
@@ -16,12 +17,12 @@ const OrderItem: React.FC<OrderItemProps> = ({item}) => {
   return (
     <div>
       {/* Products ordered */}
-      <h1 className="order-item-name">{item.name}</h1>
-      <h4 className="order-item-artist">{item.Artist_Name}</h4>
-      <div className="order-item-card">
+      <h1 className={styleClasses.orderItemName}>{item.name}</h1>
+      <h4 className={styleClasses.orderItemArtist}>{item.Artist_Name}</h4>
+      <div className={styleClasses.orderItemCard}>
         {/* Column 1: Product Image and Name */}
-        <div className="order-item-image">
-          <div className="order-item-image-inner">
+        <div className={styleClasses.orderItemImage}>
+          <div className={styleClasses.orderItemImageInner}>
             {/* Displaying product image */}
             <Image src={item.selectedImg.image} alt={item.name} fill className="object-contain"/>
           </div>

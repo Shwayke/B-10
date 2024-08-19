@@ -3,6 +3,7 @@ import NullDataError from '@/app/components/NullDataError';
 import Container from '../components/Container';
 import getProductsByArtist from '@/actions/getProductsByArtist';
 import ProductPreview from './productPreview';
+import { styleClasses } from '@/Utils/tailwindClasses';
 
 
 // Define the Product type based on your Prisma schema
@@ -34,8 +35,8 @@ export default async function Exhibitions() {
       <div className="space-y-8">
         {Array.from(productsByArtist.entries()).map(([artistName, artistProducts]) => (
           <div key={artistName}>
-            <h2 className="exhibition-artist">{artistName}</h2>
-            <div className="exhibition-cards">
+            <h2 className={styleClasses.exhibitionArtist}>{artistName}</h2>
+            <div className={styleClasses.exhibitionCards}>
               {artistProducts.map((product) => (
                 // Use ProductPreview instead of ProductsCard
                 <ProductPreview
