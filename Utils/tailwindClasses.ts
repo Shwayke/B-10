@@ -62,12 +62,13 @@ export const styleClasses = {
     formWrapperInner:"  max-w-[650px] w-full flex flex-col gap-6 items-center shadow-xl shadow-cyan-600 rounded-md p-4 md:p-8",
     addProductFormTextArea:" w-full flex flex-col flex-wrap gap-4",
     addProductFormDragArea:"  border-2 border-slate-400 p-2 border-dashed cursor-pointer text-sm font-normal text-slate-400 flex flex-col items-center justify-center",
-    orderDetails:"  max-w-[1150px] m-auto flex flex-col gap-2",
+    purchaseTable: "w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    orderDetails:"w-full max-w-full px-4 sm:px-6 lg:px-8 mx-auto flex flex-col gap-2",
     orderItemName:" text-3xl font-bold mt-4 mb-2",
     orderItemArtist:"  font-light italic mt-4 mb-2",
     orderItemCard:"  grid grid-cols-[2fr,auto,auto] text-xs md:text-sm gap-4 border-b-[1.5px] border-white py-4 items-center",
-    orderItemImageInner:" relative w-fullmax-w-[500px] aspect-square",
-    orderItemImage:"  col-span-2 justify-self-start flex gap-2 md:gap-6 items-centerw-full",
+    orderItemImageInner:" relative w-full max-w-[500px] aspect-square",
+    orderItemImage:"  col-span-2 justify-self-start flex gap-2 md:gap-6 items-center w-full",
     container:"  w-full flex-grow flex flex-col max-w-[1920p] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20",
 
 

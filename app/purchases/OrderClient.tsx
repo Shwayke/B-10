@@ -8,6 +8,7 @@ import { MdRemoveRedEye } from "react-icons/md";
 import ActionBtn from "@/app/components/ActionBtn";
 import { useRouter } from "next/navigation";
 import moment from "moment";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 interface OrdersClientProps {
     orders: ExtendedOrder[];
@@ -77,7 +78,7 @@ const OrdersClient: React.FC<OrdersClientProps> = ({ orders }) => {
     ];
 
     return (
-        <div className={`max-w-[1150px] m-auto text-xl`}>
+        <div className={styleClasses.purchaseTable}>
             <div className="mb-4 mt-8">
                 <Heading title="Your Purchases" center />
             </div>
