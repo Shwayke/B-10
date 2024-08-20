@@ -11,7 +11,6 @@ import { styleClasses } from  '../../../Utils/tailwindClasses';
 // Define the props interface for the ProductsCard component
 interface productsCardProps {
     data: any; // Data object containing product information
-    //if data includes rating field, to delete it 
 }
 
 // ProductsCard component definition

@@ -10,12 +10,12 @@ const HomeBanner = () => {
         <div className={styleClasses.homeBannerLeft}>
           <h1 className={styleClasses.homeBannerTitle}>
             Artify
-            <span className={styleClasses.homeBannerSubtitle}>Buy Original Art</span>
+            <span className={styleClasses.homeBannerSubtitle}>Find Your Art Passion</span>
           </h1>
           <p className={styleClasses.homeBannerText}>
-            Discover and buy original, hand-crafted art directly from independent artists around the world. 
-            <br />Find any art piece you desire.
-            <br />Enjoy exploring art with us.
+            Your hub for finding and exploring new artists and their creations.
+            <br />View creative art exhibitions.
+            <br />Purchase your favorite pieces.
           </p>
         </div>
         {/* Decorative Elements */}

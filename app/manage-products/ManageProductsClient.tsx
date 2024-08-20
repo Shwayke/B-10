@@ -127,18 +127,6 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({ products })
     };
   }, []);
 
-  const CustomWhiteCheckbox = (props: JSX.IntrinsicAttributes & CheckboxProps) => (
-    <Checkbox
-      {...props}
-      sx={{
-        color: "white", // Checkbox color when not checked
-        "&.Mui-checked": {
-          color: "white", // Checkbox color when checked
-        },
-      }}
-    />
-  );
-
   // Render the component
   return (
     
