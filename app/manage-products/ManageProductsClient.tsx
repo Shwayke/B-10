@@ -5,7 +5,7 @@ import { Product } from "@prisma/client";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { formatPrices } from "@/Utils/formatPrices";
 import Heading from "@/app/components/Heading";
-import { MdCached, MdClose, MdDelete, MdDone, MdRemoveRedEye } from "react-icons/md";
+import { MdDelete, MdRemoveRedEye } from "react-icons/md";
 import ActionBtn from "@/app/components/ActionBtn";
 import { JSX, useCallback, useEffect } from "react";
 import axios from "axios";
@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 import { deleteObject, getStorage, ref } from "firebase/storage";
 import firebaseApp from "@/libs/firebase";
 import Checkbox, { CheckboxProps } from "@mui/material/Checkbox";
+import { styleClasses } from "@/Utils/tailwindClasses";
 
 // Define interface for props
 interface ManageProductsClientProps {
@@ -141,7 +142,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({ products })
   // Render the component
   return (
     
-    <div className="max-w-[1150px] m-auto text-xl bg-gray-500 p-4">
+    <div className={styleClasses.productsTable}>
       <div className="mb-4 mt-8 text-white">
         <Heading title="Manage Products" center />
       </div>

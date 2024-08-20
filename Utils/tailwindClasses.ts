@@ -69,6 +69,7 @@ export const styleClasses = {
     orderItemCard:"  grid grid-cols-[2fr,auto,auto] text-xs md:text-sm gap-4 border-b-[1.5px] border-white py-4 items-center",
     orderItemImageInner:" relative w-full max-w-[500px] aspect-square",
     orderItemImage:"  col-span-2 justify-self-start flex gap-2 md:gap-6 items-center w-full",
+    productsTable: "w-full max-w-[95vw] lg:max-w-[1150px] mx-auto text-xl bg-gray-500 p-4",
     container:"  w-full flex-grow flex flex-col max-w-[1920p] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20",
 
 
