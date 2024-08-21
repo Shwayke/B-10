@@ -36,7 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </CartProvider>
         </DarkLightProvider>
-        <script src="https://morethanwallet.com/appstore/index.js"></script>
       </body>
     </html>
   );
